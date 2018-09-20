@@ -51,10 +51,10 @@ The application uses [Spring Boot](http://projects.spring.io/spring-boot/), so i
 To view the running application, visit [http://localhost:8080](http://localhost:8080) in your browser
 
 ## i18n Internationalization and localization
-http://localhost:8080/?lang=zh_cn
-http://localhost:8080/?lang=ja
-http://localhost:8080/?lang=jp
-http://localhost:8080/?lang=en
+(1) http://localhost:8080/?lang=zh_cn
+(2) http://localhost:8080/?lang=ja
+(3) http://localhost:8080/?lang=jp
+(4) http://localhost:8080/?lang=en
 
 ## Lombok
 https://qiita.com/opengl-8080/items/671ffd4bf84fe5e32557
@@ -83,3 +83,7 @@ java -jar springboot-thymeleaf-jpa-0.0.1-SNAPSHOT.jar
 mvn clean package
 (OR mvn install)
 java -jar target/springboot-thymeleaf-jpa-0.0.1-SNAPSHOT.jar
+
+## TODO 生成jar后报错
+The dependencies of some of the beans in the application context form a cycle:
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head th:replace="TitanMaster/fragments/head :: head">
+</head>
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+	<header th:replace="TitanMaster/fragments/header :: header"></header>
+
+	<div class="main">
+		<section class="module bg-dark-60 service-page-header" data-background="assets/images/services_bg.jpg" th:data-background="@{/TitanMaster/assets/images/carousel/slide01.jpg}">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<h2 class="module-title font-alt" th:text="#{navbar.item.category}">Category</h2>
+						<div class="module-subtitle font-serif">CategoryCategoryCategoryCategoryCategory.</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="module-medium" id="product">
+			<div class="container">
+				<div class="row multi-columns-row">
+					<div class="col-md-4 col-sm-6 col-xs-12" th:each="product : ${result4product}">
+						<div class="content-box">
+							<div class="content-box-image">
+								<img th:src="@{/TitanMaster/assets/images/carousel/slide01.jpg}" alt="Main Demo">
+							</div>
+							<div class="post-header font-alt">
+								<h2 class="content-box-title font-serif" th:text="${product.name}">Main Demo</h2>
+							</div>
+							<div class="post-entry">
+								<p>CategoryCategoryCategoryCategoryCategory2.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- Footer -->
+	<footer th:replace="TitanMaster/fragments/footer :: footer"></footer>
+
+	<!-- jsScripts -->
+	<div th:replace="TitanMaster/fragments/jsScripts :: scripts"></div>
+</body>
+</html>

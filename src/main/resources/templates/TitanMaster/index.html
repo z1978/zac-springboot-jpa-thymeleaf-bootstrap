@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="TitanMaster/fragments/head :: head">
+</head>
+
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
+	<header th:replace="TitanMaster/fragments/header :: header"></header>
+
+	<section class="home-section home-full-height" id="home">
+		<div class="hero-slider">
+			<ul class="slides">
+				<li class="bg-dark-30 restaurant-page-header bg-dark" style="background-image: url(&amp;quot;assets/images/restaurant/slider1.jpg&amp;quot;);"
+					th:style="'background-image:url(&quot;' + @{/TitanMaster/assets/images/carousel/slide01.jpg} +'&quot;);'">
+					<div class="titan-caption">
+						<div class="caption-content">
+							<div class="font-alt mb-30 titan-title-size-1">Hello & welcome</div>
+							<div class="font-alt mb-40 titan-title-size-4" th:text="#{navbar.company}">Company</div>
+							<a class="section-scroll btn btn-border-w btn-round" href="#menu">Check Our Menu</a>
+						</div>
+					</div>
+				</li>
+				<li class="bg-dark-30 restaurant-page-header bg-dark" style="background-image: url(&amp;quot;assets/images/restaurant/slider2.jpg&amp;quot;);"
+					th:style="'background-image:url(&quot;' + @{/TitanMaster/assets/images/carousel/slide05.jpg} +'&quot;);'">
+					<div class="titan-caption">
+						<div class="caption-content">
+							<div class="font-alt mb-30 titan-title-size-2">
+								CompanyCompanyCompanyCompanyCompanyCompany1
+							</div>
+							<a class="btn btn-border-w btn-round" href="about1.html">Discover our story</a>
+						</div>
+					</div>
+				</li>
+				<li class="bg-dark-30 restaurant-page-header bg-dark" style="background-image: url(&amp;quot;assets/images/restaurant/slider3.jpg&amp;quot;);"
+					th:style="'background-image:url(&quot;' + @{/TitanMaster/assets/images/carousel/slide06.png} +'&quot;);'">
+					<div class="titan-caption">
+						<div class="caption-content">
+							<div class="font-alt mb-30 titan-title-size-1">CompanyCompanyCompanyCompanyCompanyCompany2</div>
+							<div class="font-alt mb-40 titan-title-size-3">CompanyCompanyCompanyCompanyCompanyCompany3</div>
+							<a class="section-scroll btn btn-border-w btn-round" href="#specialities">Learn More</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+
+
+	<div class="main showcase-page">
+	
+		<section class="module-extra-small bg-dark">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-md-8 col-lg-9">
+						<div class="callout-text font-alt">
+							<h4 style="margin-top: 0px;" th:text="#{navbar.item.category.skin_care}">Skin care</h4>
+							<p style="margin-bottom: 0px;">What is skin care...</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="module-medium" id="category1">
+			<div class="container">
+				<div class="row multi-columns-row">
+					<div class="col-md-4 col-sm-6 col-xs-12" th:each="category : ${result4category1}">
+						<a class="content-box" href="index_mp_fullscreen_video_background.html" th:href="@{/tm/category/{id}(id=${category.categoryId})}">
+							<div class="content-box-image">
+								<img th:src="@{/TitanMaster/assets/images/carousel/slide01.jpg}" alt="Main Demo">
+							</div>
+							<h3 class="content-box-title font-serif" th:text="${category.categoryName}">Main Demo</h3>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="module-extra-small bg-dark">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-md-8 col-lg-9">
+						<div class="callout-text font-alt">
+							<h4 style="margin-top: 0px;" th:text="#{navbar.item.category.body_care}">Body care</h4>
+							<p style="margin-bottom: 0px;">What is body care...</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="module-medium" id="category3">
+			<div class="container">
+				<div class="row multi-columns-row">
+					<div class="col-md-4 col-sm-6 col-xs-12" th:each="category : ${result4category3}">
+						<a class="content-box" href="index_mp_fullscreen_video_background.html" th:href="@{/tm/category/{id}(id=${category.categoryId})}">
+							<div class="content-box-image">
+								<img th:src="@{/TitanMaster/assets/images/carousel/slide01.jpg}" alt="Main Demo">
+							</div>
+							<h3 class="content-box-title font-serif" th:text="${category.categoryName}">Main Demo</h3>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+	<!-- Footer -->
+	<footer th:replace="TitanMaster/fragments/footer :: footer"></footer>
+
+	<!-- jsScripts -->
+	<div th:replace="TitanMaster/fragments/jsScripts :: scripts"></div>
+
+</body>
+</html>

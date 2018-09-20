@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head th:replace="TitanMaster/fragments/head :: head">
+</head>
+
+<body>
+	<header th:fragment="header">
+
+		<div class="page-loader">
+			<div class="loader">Loading...</div>
+		</div>
+
+		<!-- header-area start -->
+		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/tm" th:text="#{navbar.brand}">Brand</a>
+				</div>
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/tm" th:text="#{navbar.home}">Home</a></li>
+						<li><a href="/tm/about" th:text="#{navbar.about}">About</a></li>
+
+						<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" th:text="#{navbar.item}">Item</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" th:text="#{navbar.item.category.skin_care}">Skin care</a>
+									<ul class="dropdown-menu">
+										<li><a href="/tm/category/5" th:text="#{navbar.item.category.skin_care.white_label}">White label</a></li>
+										<li><a href="/tm/category/5" th:text="#{navbar.item.category.skin_care.hurry_harry}">Hurry harry</a></li>
+										<li><a href="/tm/category/5" th:text="#{navbar.item.category.skin_care.arupita}">Arupita</a></li>
+									</ul></li>
+								<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" th:text="#{navbar.item.category.body_care}">Body care</a>
+									<ul class="dropdown-menu">
+										<li><a href="/tm/category/5" th:text="#{navbar.item.category.body_care.b3}">B3</a></li>
+										<li><a href="/tm/category/5" th:text="#{navbar.item.category.body_care.beppin_body}">Beppin body</a></li>
+									</ul></li>
+							</ul></li>
+
+						<li><a href="/tm/contact" th:text="#{navbar.contact}">Contact</a></li>
+						<!--
+						<li><a href="#" th:text="#{navbar.shopping}">Shopping</a></li>
+						 -->
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- header-area end -->
+	</header>
+	<!-- header end -->
+
+	<div th:replace="TitanMaster/fragments/jsScripts :: scripts"></div>
+</body>
+</html>

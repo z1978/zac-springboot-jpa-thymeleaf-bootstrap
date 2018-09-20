@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+</head>
+<body>
+
+
+<nav th:replace="fragments/header :: nav"></nav>
+
+<div id="admin-section">
+    <div class="admin-inner">
+        <div class="container">
+            <div class="d-flex flex-row">
+                <div th:replace="fragments/adminSidebar :: admin-sidebar"></div>
+
+                <div id="admin-content">
+                    <div th:if="${contactHasBeenSaved}" class="alert alert-success alert-dismissible fade show"
+                         role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Well done!</strong> Contact has been saved!!!
+                    </div>
+                    <div th:if="${contactHasBeenUpdated}" class="alert alert-success alert-dismissible fade show"
+                         role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Well done!</strong> Contact has been updated!!!
+                    </div>
+                    <table class="table table-striped table-responsive admin-table">
+                        <thead class="thead">
+                        <tr>
+                            <th>contactId</th>
+                            <th>yourName</th>
+                            <th>yourEmail</th>
+                            <th>yourMessage</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="contact : ${contacts}">
+                            <td th:text="${contact.contactId}">1</td>
+                            <td th:text="${contact.yourName}">2</td>
+                            <td th:text="${contact.yourEmail}">3</td>
+                            <td th:text="${contact.yourMessage}">Contact Description detail</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+<div th:replace="fragments/jsScripts :: scripts"></div>
+
+
+</body>
+</html>

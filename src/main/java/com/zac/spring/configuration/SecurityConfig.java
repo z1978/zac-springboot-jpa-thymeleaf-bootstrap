@@ -17,10 +17,10 @@ import com.zac.spring.service.userDetails.UserDetailsServiceImpl;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Autowired
-	private UserDetailsServiceImpl userDetailsServiceImpl;
-	@Autowired
-	private BCryptPasswordEncoder bCryptPasswordEncoder;
+//	@Autowired
+//	private UserDetailsServiceImpl userDetailsServiceImpl;
+//	@Autowired
+//	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	// Beans
 	@Bean
@@ -33,13 +33,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		return new ModelMapper();
 	}
 
-	@Bean
-	public DaoAuthenticationProvider authProvider() {
-		final DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-		authProvider.setUserDetailsService(userDetailsServiceImpl);
-		authProvider.setPasswordEncoder(bCryptPasswordEncoder);
-		return authProvider;
-	}
+//	@Bean
+//	public DaoAuthenticationProvider authProvider() {
+//		final DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+//		authProvider.setUserDetailsService(userDetailsServiceImpl);
+//		authProvider.setPasswordEncoder(bCryptPasswordEncoder);
+//		return authProvider;
+//	}
 
 	// @Bean
 	// public RememberMeServices rememberMeServices() {
@@ -59,9 +59,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.failureUrl("/login-error").and().logout().logoutUrl("/logout").logoutSuccessUrl("/login").permitAll();
 	}
 
-	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.authenticationProvider(authProvider());
-	}
+//	@Override
+//	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//		auth.authenticationProvider(authProvider());
+//	}
 
 }

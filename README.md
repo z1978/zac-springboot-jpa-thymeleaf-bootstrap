@@ -86,4 +86,7 @@ java -jar target/springboot-thymeleaf-jpa-0.0.1-SNAPSHOT.jar
 
 ## TODO 生成jar后报错
 The dependencies of some of the beans in the application context form a cycle:
+UserService
+SecurityConfig
+UserDetailsServiceImpl
 

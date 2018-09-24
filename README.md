@@ -73,9 +73,11 @@ https://dev.classmethod.jp/server-side/java/spring-data-jpa_search/
 ## Spring Cache
 https://www.cnblogs.com/cnjavahome/p/8436219.html
 
+#https://qiita.com/ksby/items/7cf5235f6061ef1600e2
+# Spring Boot + Thymeleaf + Enum（列挙型） でドロップダウンリストを表示する
 
 #https://www.tianmaying.com/tutorial/spring-boot-docker
-#在应用代码编写完成后，可以直接将其打包并运行：
+# 在应用代码编写完成后，可以直接将其打包并运行：
 Maven:
 mvn package
 java -jar springboot-thymeleaf-jpa-0.0.1-SNAPSHOT.jar

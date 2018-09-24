@@ -19,7 +19,7 @@
 								</button>
 								<!-- Brand -->
 								<a class="navbar-brand page-scroll sticky-logo" href="index.html">
-									<h1>
+									<h1 th:text="#{navbar.brand.zyy}">
 										<span>e</span>Business
 									</h1> <!-- Uncomment below if you prefer to use an image logo --> <!-- <img src="eBusiness/img/logo.png" alt="" title=""> -->
 								</a>
@@ -27,13 +27,13 @@
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
 								<ul class="nav navbar-nav navbar-right">
-									<li class="active"><a class="page-scroll" href="#home">Home</a></li>
-									<li><a class="page-scroll" href="#about">About</a></li>
-									<li><a class="page-scroll" href="#services">Services</a></li>
-									<li><a class="page-scroll" href="#team">Team</a></li>
-									<li><a class="page-scroll" href="#portfolio">Portfolio</a></li>
-									<li><a class="page-scroll" href="#blog">Blog</a></li>
-									<li><a class="page-scroll" href="#contact">Contact</a></li>
+									<li class="active"><a class="page-scroll" href="#home" th:text="#{navbar.home}">Home</a></li>
+									<li><a class="page-scroll" href="#about" th:text="#{navbar.about}">About</a></li>
+									<li><a class="page-scroll" href="#services" th:text="#{navbar.services}">Services</a></li>
+									<li><a class="page-scroll" href="#team" th:text="#{navbar.team}">Team</a></li>
+									<li><a class="page-scroll" href="#portfolio" th:text="#{navbar.portfolio}">Portfolio</a></li>
+									<li><a class="page-scroll" href="#blog" th:text="#{navbar.blog}">Blog</a></li>
+									<li><a class="page-scroll" href="#contact" th:text="#{navbar.contact}">Contact</a></li>
 								</ul>
 							</div>
 							<!-- navbar-collapse -->
